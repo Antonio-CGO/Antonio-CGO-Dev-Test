@@ -40,7 +40,7 @@ public class ValidaService {
 	public static boolean validaModelo(String modelo) {
 	    boolean result = false;
 
-	    Pattern pattern = Pattern.compile("^[a-zA-ZÀ-ÿ]{1,10}$");
+	    Pattern pattern = Pattern.compile("^(?=.*[A-Za-z])[A-Za-z0-9]{1,10}$");
 	    Matcher mat = pattern.matcher(modelo);
 	    
 	    if (!mat.matches()) {

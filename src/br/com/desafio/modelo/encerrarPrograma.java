@@ -1,9 +1,12 @@
 package br.com.desafio.modelo;
 
+import java.sql.SQLException;
+
+import br.com.desafio.modelo.service.Service;
 import br.com.desafio.modelo.service.ValidaService;
 
 public class encerrarPrograma {
-	public static void posMenu() {
+	public static void posMenu() throws SQLException {
 		System.out.println("PROGRAMA ENCERRADO!");
 		
 		System.out.println("Deseja reiniciar o programa: (1)Sim - (2)Não");
@@ -14,9 +17,11 @@ public class encerrarPrograma {
 			Menu.menu();
 		} else if(escolha == 2) {
 			System.out.println("SISTEMA DESLIGADO!");
+			Service.fechaConexao();
 		} else {
 			System.out.println("Selecione uma opcao valida!");
 			posMenu();
 		}
+		
 	}
 }

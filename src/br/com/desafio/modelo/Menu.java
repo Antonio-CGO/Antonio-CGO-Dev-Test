@@ -1,5 +1,7 @@
 package br.com.desafio.modelo;
 
+import java.sql.SQLException;
+
 import br.com.desafio.modelo.service.Service;
 import br.com.desafio.modelo.service.ValidaService;
 
@@ -8,7 +10,7 @@ public class Menu {
 	static Service servico = new Service();
 	
 	
-	public static void menu() {
+	public static void menu() throws SQLException {
 
 		System.out.println("============MENU============");
 		System.out.println("(1) -  CADASTRAR VEICULO");
