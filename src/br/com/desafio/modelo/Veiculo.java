@@ -76,11 +76,4 @@ public class Veiculo {
 		return "Veiculo modelo:" + modelo + ", placa:" + placa + ", ano:" + ano + ", tipo:" + tipo + ", estacionado:" + estacionado;
 	}
 
-
-	
-	
-	
-	
-	
-
 }

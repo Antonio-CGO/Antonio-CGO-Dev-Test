@@ -47,7 +47,8 @@ public class Service {
 			String modelo;
 			modelo = scan.next().toUpperCase();
 			while (!(ValidaService.validaModelo(modelo) == true)) {
-				System.out.println("Não use caracteres especiais e não informe apenas números");
+				System.out.println("Não use caracteres especiais!");
+				System.out.println("Não use apenas números -- Limite 10 caractere!");
 				System.out.println("Informe o modelo do veiculo válido ex(COROLA , HB20): ");
 				modelo = scan.next().toUpperCase();
 				ValidaService.validaModelo(modelo);
@@ -169,7 +170,7 @@ public class Service {
 
 			String transforma = "";
 			int selecione = ValidaService.ValidaScannerInt(transforma);
-			while (!(selecione <= 3 && selecione >= 1)) {
+			while (!(selecione <= 2 && selecione >= 1)) {
 				System.out.println("Deseja estacionar este veiculo: (1)Sim - (2)Não");
 				selecione = ValidaService.ValidaScannerInt(transforma);
 			}
@@ -233,7 +234,7 @@ public class Service {
 			System.out.println("Deseja retirar este veiculo: (1)Sim - (2)Não");
 			String transforma = "";
 			int selecione = ValidaService.ValidaScannerInt(transforma);
-			while (!(selecione <= 3 && selecione >= 1)) {
+			while (!(selecione <= 2 && selecione >= 1)) {
 				System.out.println("Deseja retirar este veiculo: (1)Sim - (2)Não");
 				selecione = ValidaService.ValidaScannerInt(transforma);
 			}
